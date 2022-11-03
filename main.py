@@ -1,7 +1,15 @@
-a = [1, 2, 3, 17, 64, 1234, 4, 5, 7]
-maxim = 0
+def find_max(a):
+    maxim = -10**8
+    for elem in a:
+        if elem > maxim:
+            maxim = elem
+    return maxim
 
-for i in range(len(a)):
-    if a[i] > maxim: maxim = a
 
-print(maxim)
+len = int(input("Введите длину массива:"))
+a = []
+for i in range(len):
+    a.append(int(input("Введите " + str(i) + " элемент массива:")))
+
+print("Максимум:", find_max(a))
+
